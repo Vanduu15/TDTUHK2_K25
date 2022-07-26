@@ -1,0 +1,22 @@
+public class HocSinh{
+    protected String hoTen;
+    protected double diemToan, diemVan, diemAnh;
+    public HocSinh(){
+        this.hoTen = "";
+        this.diemToan =0.0;
+        this.diemVan = 0.0;
+        this.diemAnh = 0.0;
+    }
+    public HocSinh(String hoTen, double diemToan, double diemVan, double diemAnh){
+        this.hoTen = hoTen;
+        this.diemToan = diemToan;
+        this.diemVan = diemVan;
+        this.diemAnh = diemAnh;
+    }
+    public double tinhDiemTB(){
+        return (double)(diemToan+diemVan+diemAnh)/3.0;
+    }
+    public String toString(){
+        return "("+this.hoTen+", "+this.tinhDiemTB()+")";
+    }
+}
